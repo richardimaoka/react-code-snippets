@@ -8,7 +8,6 @@
 
   /* Stretch height within the parent grid */
   align-self: stretch;
-
   /* Centering the text */
   display: grid;
   align-items: center;
