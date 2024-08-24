@@ -1,0 +1,19 @@
+.component {
+  /* Cancel the default <a> decoration */
+  text-decoration: none;
+  color: inherit;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  /* Stretch height within the parent grid */
+  align-self: stretch;
+
+  /* Centering the text */
+  display: grid;
+  align-items: center;
+}
+
+.component:hover {
+  background-color: rgb(201, 201, 201);
+}
