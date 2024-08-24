@@ -1,0 +1,16 @@
+.component {
+  /* Stretch height within the parent grid */
+  align-self: stretch;
+
+  display: grid;
+  /* auto-fill doesn't work - so, explicitly specify each column */
+  grid-template-columns: auto auto auto;
+
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+  /* border in-between is defined below: `.component > * + *` */
+}
+
+.component > * + * {
+  border-left: solid 1px white;
+}
