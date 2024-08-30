@@ -1,5 +1,4 @@
 import styles from "./Header.module.css";
-
 import { MenuButtonStack } from "./MenuButtonStack";
 
 interface Props {}
