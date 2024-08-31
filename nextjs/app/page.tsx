@@ -1,9 +1,9 @@
-import { ButtonFav } from "./components/buttons/ButtonFav";
+import { ListItemFavorite } from "./components/list/ListItemFavorite";
 
 export default function Page() {
   return (
     <div>
-      <ButtonFav />
+      <ListItemFavorite />
     </div>
   );
 }
