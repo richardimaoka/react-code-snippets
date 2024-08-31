@@ -1,9 +1,9 @@
-import { Header } from "./Header";
+import { ButtonFav } from "./components/buttons/ButtonFav";
 
 export default function Page() {
   return (
     <div>
-      <Header />
+      <ButtonFav />
     </div>
   );
 }

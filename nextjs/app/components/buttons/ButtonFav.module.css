@@ -1,0 +1,11 @@
+.component {
+  display: grid;
+  grid-template-rows:
+    auto /* icon */
+    auto /* name */;
+  justify-items: center;
+}
+
+.name {
+  font-size: 0.8rem;
+}
