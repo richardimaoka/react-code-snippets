@@ -1,9 +1,10 @@
+import { TextButton } from "./components/buttons/TextButton";
 import { ListItemFavorite } from "./components/list/ListItemFavorite";
 
 export default function Page() {
   return (
     <div>
-      <ListItemFavorite />
+      <TextButton>text button</TextButton>
     </div>
   );
 }
