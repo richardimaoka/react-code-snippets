@@ -1,10 +1,9 @@
-import { TextButton } from "./components/buttons/TextButton";
-import { ListItemFavorite } from "./components/list/ListItemFavorite";
+import { IconButton } from "./components/buttons/IconButton";
 
 export default function Page() {
   return (
     <div>
-      <TextButton>text button</TextButton>
+      <IconButton text="icon button" />
     </div>
   );
 }
