@@ -10,6 +10,7 @@
   /* Padding for button */
   padding-top: 8px;
   padding-bottom: 8px;
+  /* Due to shape and spacing of the icon and the text, padding can be adjusted */
   padding-left: 12px;
   padding-right: 20px;
 
