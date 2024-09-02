@@ -1,5 +1,11 @@
+import { IconFavorite } from "../icons/IconFavorite";
 import styles from "./Button.module.css";
 
 export function Button() {
-  return <button className={styles.button}>button</button>;
+  return (
+    <button className={styles.button}>
+      <IconFavorite />
+      <span>button</span>
+    </button>
+  );
 }
