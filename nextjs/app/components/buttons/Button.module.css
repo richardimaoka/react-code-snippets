@@ -12,7 +12,5 @@
   padding-left: 8px;
   padding-right: 8px;
 
-  color: white;
-  /* contained background  */
-  background-color: rgb(25, 118, 210);
+  color: rgb(25, 118, 210);
 }
