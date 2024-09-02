@@ -13,7 +13,17 @@
   padding-left: 8px;
   padding-right: 8px;
 
+  /* CSS grid for layout inside button */
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 4px;
+
   color: white;
   /* contained background  */
   background-color: rgb(25, 118, 210);
 }
+
+/* .button > * {
+  background-color: rgb(152, 161, 170);
+} */
