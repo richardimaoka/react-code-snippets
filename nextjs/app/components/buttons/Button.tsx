@@ -1,3 +1,5 @@
+import styles from "./Button.module.css";
+
 export function Button() {
-  return <button>button</button>;
+  return <button className={styles.button}>button</button>;
 }
