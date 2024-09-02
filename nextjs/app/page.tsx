@@ -1,9 +1,10 @@
-import { IconButton } from "./components/buttons/IconButton";
+import { Button } from "./components/buttons/Button";
+import styles from "./page.module.css";
 
 export default function Page() {
   return (
-    <div>
-      <IconButton text="icon button" />
+    <div className={styles.component}>
+      <Button />
     </div>
   );
 }
