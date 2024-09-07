@@ -1,0 +1,50 @@
+.component {
+  /* Cancel button's default styling */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+
+  /* Padding for button */
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  /* button decoration */
+  color: white;
+  /* contained background  */
+  background-color: rgb(25, 118, 210);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.component:hover {
+  background-color: rgb(75, 140, 206);
+}
+
+.ripple {
+  /*position: absolute; は必須*/
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /*今回はアニメーションの名前，変化の時間，繰り返し回数*/
+  animation: rippleEffect 1200ms 1;
+  opacity: 0;
+}
+
+@keyframes rippleEffect {
+  from {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  to {
+    transform: scale(50);
+    opacity: 0;
+  }
+}
