@@ -1,10 +1,10 @@
-import { RippleEffectButton2 } from "./components/buttons/RippleEffectButton2";
+import { SizeEffectButton } from "./components/buttons/SizeEffectButton";
 import styles from "./page.module.css";
 
 export default function Page() {
   return (
     <div className={styles.component}>
-      <RippleEffectButton2 />
+      <SizeEffectButton />
     </div>
   );
 }
