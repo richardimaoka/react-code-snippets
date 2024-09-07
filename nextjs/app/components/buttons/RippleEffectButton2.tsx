@@ -5,7 +5,7 @@ import styles from "./RippleEffectButton2.module.css";
 
 interface Props {}
 
-interface Clicked {
+interface Click {
   x: number;
   y: number;
   timestamp: number;
@@ -13,36 +13,43 @@ interface Clicked {
 
 export function RippleEffectButton2(props: Props) {
   const ref = useRef<HTMLButtonElement>(null);
-  const [clicked, setClicked] = useState<Clicked | null>(null);
+  // For consecutive clicks, it needs to be an array, instead of a single click
+  const [clicks, setClicks] = useState<Click[]>([]);
 
-  // Upon click, revert the clicked state to null after timeout
-  useEffect(() => {
-    if (clicked) {
-      setTimeout(function () {
-        setClicked(null);
-      }, 300);
-    }
-  }, [clicked]);
+  function removeClick(timestamp: number) {
+    const updatedClicks = clicks.filter((c) => c.timestamp === timestamp);
+    setClicks(updatedClicks);
+  }
 
   function onClick(e: React.MouseEvent<HTMLElement>) {
-    if (ref.current && !clicked) {
-      setClicked({
+    if (ref.current) {
+      const now = Date.now();
+      let updatedClicks = [...clicks];
+      updatedClicks.push({
         x: e.pageX - ref.current?.offsetLeft,
         y: e.pageY - ref.current?.offsetTop,
-        timestamp: Date.now(),
+        timestamp: now,
       });
+      setClicks(updatedClicks);
+      setTimeout(function () {
+        removeClick(now);
+      }, 1200);
     }
   }
 
   return (
     <button ref={ref} className={styles.component} onClick={onClick}>
       button
-      {clicked && (
-        <div
-          className={styles.ripple}
-          style={{ top: `${clicked.y}px`, left: `${clicked.x}px` }}
-        />
-      )}
+      {
+        // For consecutive clicks, multiple elements, instead of a single element
+        clicks.map((c) => (
+          <div
+            key={c.timestamp}
+            className={styles.ripple}
+            style={{ top: `${c.y}px`, left: `${c.x}px` }}
+          />
+        ))
+      }
     </button>
   );
 }
