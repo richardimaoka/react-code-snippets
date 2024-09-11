@@ -1,0 +1,23 @@
+.component {
+  margin-top: 300px;
+
+  display: grid;
+  grid-template-columns: 1fr repeat(4, auto);
+  column-gap: 10px;
+}
+
+.component > div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  color: white;
+  font-size: 20px;
+
+  background-color: rgb(161, 44, 83);
+  transform: width 0.3s;
+  margin-bottom: 10px;
+
+  font-size: 3rem;
+}
