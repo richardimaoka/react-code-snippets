@@ -2,6 +2,11 @@
   margin: 0 auto;
 
   max-width: 1080px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .component > h1,
