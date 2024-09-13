@@ -1,0 +1,42 @@
+.component {
+  /* fixed positioning */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  /* drawer size */
+  height: 100svh;
+  width: 100svw;
+  max-width: 500px;
+
+  /* background */
+  background-color: aqua;
+}
+
+.slidein {
+  animation: 0.3s slidein;
+  transform: translateX(0); /* end state */
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slideout {
+  animation: 0.3s slideout;
+  transform: translateX(-100%); /* end state */
+}
+
+@keyframes slideout {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
