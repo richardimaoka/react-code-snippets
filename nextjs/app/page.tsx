@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { Article } from "./components/article/Article";
 import styles from "./page.module.css";
-import { MenuPopover } from "./components/tools/MenuPopover";
 
 export default function Page() {
   return (
     <div className={styles.component}>
-      <MenuPopover />
+      <Article />
     </div>
   );
 }
