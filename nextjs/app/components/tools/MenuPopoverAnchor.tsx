@@ -1,8 +1,8 @@
-import styles from "./MenuPopover.module.css";
+import styles from "./MenuPopoverAnchor.module.css";
 
 interface Props {}
 
-export function MenuPopover(props: Props) {
+export function MenuPopoverAnchor(props: Props) {
   return (
     <div className={styles.component}>
       <button popoverTarget="menu">Open Menu</button>
