@@ -25,19 +25,23 @@ export function MenuPanel() {
   if (isOnAnchor || isOnMenu) {
     ref.current?.showPopover();
   } else {
-    // ref.current?.hidePopover();
+    ref.current?.hidePopover();
   }
 
   return (
-    <ul className={styles.component}>
-      <li>Adobe Fontsから追加</li>
-      <li
-        className={styles.anchor}
-        onMouseOver={onAnchor}
-        onMouseLeave={leaveAnchor}
-      >
-        フォント
-      </li>
+    <div>
+      <ul className={styles.component}>
+        <li className={styles.item}>Adobe Fontsから追加</li>
+        <li
+          className={styles.anchor + " " + styles.item}
+          onMouseOver={onAnchor}
+          onMouseLeave={leaveAnchor}
+        >
+          フォント
+        </li>
+        <li className={styles.item}>最近使用したフォント</li>
+        <li className={styles.item}>サイズ</li>
+      </ul>
       <div
         ref={ref}
         className={styles.menu}
@@ -47,8 +51,6 @@ export function MenuPanel() {
       >
         menu
       </div>
-      <li>最近使用したフォント</li>
-      <li>サイズ</li>
-    </ul>
+    </div>
   );
 }

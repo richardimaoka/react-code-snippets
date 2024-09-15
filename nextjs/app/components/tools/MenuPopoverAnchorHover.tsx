@@ -30,7 +30,7 @@ export function MenuPopoverAnchorHover(props: Props) {
   if (isOnAnchor || isOnMenu) {
     ref.current?.showPopover();
   } else {
-    // ref.current?.hidePopover();
+    ref.current?.hidePopover();
   }
 
   return (
