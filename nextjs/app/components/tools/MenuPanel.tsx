@@ -1,12 +1,7 @@
-"use client";
-
+import styles from "./MenuPanel.module.css";
 import { useRef, useState } from "react";
-import styles from "./MenuPopoverAnchorHover.module.css";
-import { MenuPanel } from "./MenuPanel";
 
-interface Props {}
-
-export function MenuPopoverAnchorHover(props: Props) {
+export function MenuPanel() {
   const ref = useRef<HTMLDivElement>(null);
   const [isOnAnchor, setOnAnchor] = useState(false);
   const [isOnMenu, setOnMenu] = useState(false);
@@ -34,23 +29,26 @@ export function MenuPopoverAnchorHover(props: Props) {
   }
 
   return (
-    <div className={styles.component}>
-      <div
+    <ul className={styles.component}>
+      <li>Adobe Fontsから追加</li>
+      <li
         className={styles.anchor}
         onMouseOver={onAnchor}
         onMouseLeave={leaveAnchor}
       >
-        Hover to menu
-      </div>
+        フォント
+      </li>
       <div
-        popover={"auto"}
         ref={ref}
         className={styles.menu}
         onMouseOver={onMenu}
         onMouseLeave={leaveMenu}
+        popover="auto"
       >
-        <MenuPanel />
+        menu
       </div>
-    </div>
+      <li>最近使用したフォント</li>
+      <li>サイズ</li>
+    </ul>
   );
 }

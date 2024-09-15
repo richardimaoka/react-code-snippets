@@ -1,4 +1,4 @@
-.component > button {
+.anchor {
   /* Cancel button's default styling */
   background-color: transparent;
   border: none;
@@ -11,6 +11,10 @@
 }
 
 .menu {
+  /* Cancel default popver style */
+  border-style: none;
+  padding: 0px;
+
   /* Anchor-positioned element is positioned including its margin */
   margin: 0;
 
@@ -20,4 +24,6 @@
   position-anchor: --anchor-el;
   top: anchor(bottom);
   left: anchor(left);
+
+  border: solid 1px black;
 }
