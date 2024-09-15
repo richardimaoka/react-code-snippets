@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./MenuPanel.module.css";
 import { useRef, useState } from "react";
 
