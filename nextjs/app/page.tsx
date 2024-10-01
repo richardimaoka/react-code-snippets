@@ -1,11 +1,10 @@
-import { Article } from "./components/article/Article";
-import { MenuPopoverAnchorHover } from "./components/tools/MenuPopoverAnchorHover";
+import { ListItem } from "./components/icon-list/ListItem";
 import styles from "./page.module.css";
 
 export default function Page() {
   return (
     <div className={styles.component}>
-      <MenuPopoverAnchorHover />
+      <ListItem iconName={"favorite"} />
     </div>
   );
 }
